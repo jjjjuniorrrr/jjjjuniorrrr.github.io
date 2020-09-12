@@ -1,7 +1,6 @@
 <html>
 	<head>	
-		<link rel="stylesheet" href="css/gallery.theme.css">
-		<link rel="stylesheet" href="css/gallery.min.css">
+		
 
 		<style type="text/css">
 
@@ -33,15 +32,7 @@
 				
 				}
 
-			#slide{position:absolute;
-				padding: 1em;
-				top:180px;
-				left:50%;
-				width:732px;
-				margin-left:-366px;
-				
-			}
-
+			
 			.lkMenu{text-decoration:none;
 				color:#ffc90d;
 				font-weight:bold;
@@ -51,6 +42,88 @@
 			}
 			.lkMenu:hover{color:#3f47cc;}
 			
+
+
+
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  background: #e9e1c1;
+  margin: 0;
+  font-family: monospace;
+}
+h2 {
+  text-align: center;
+}
+a {color: #19838d;}
+
+.container {
+  margin: 50px auto;
+  padding-bottom: 28%;
+  width: 60%;
+  overflow: hidden;
+  border: 15px solid #fff;
+  position: relative;
+  display:block;
+  margin: 40px auto 40px;
+  box-shadow: 0 10px 10px #777;
+}
+
+.photoWrapper {
+  position: absolute;
+  animation: round 16s infinite;
+  opacity: 0;
+  top: 0;
+  left: 0;
+}
+.photo {
+  height:auto;
+  width:100%;
+}
+p.photoDescr {
+  background-color: #8e8e8e;
+  margin: 0;
+  padding: 5px;
+}
+
+@keyframes round {
+  25% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+}
+.photoWrapper:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.photoWrapper:nth-child(2) {
+  animation-delay: 4s;
+}
+
+.photoWrapper:nth-child(3) {
+  animation-delay: 8s;
+}
+
+.photoWrapper:nth-child(4) {
+  animation-delay: 12s;
+}
+@media (max-width: 728px) {
+  .container {
+    width: 90%;
+    padding-bottom: 50%;
+  }
+}
+
+
+
+
+
+
 
 		</style>
 
@@ -69,41 +142,27 @@
 	<div id="menu">
 			<a href="sobre.html" target="_self"class="lkMenu">SOBRE A REDEAV</a> - 
 			<a href="pousadas.html" target="_self"class="lkMenu">POUSADAS</a> - 
-			<a href="praia.html" target="_self"class="lkMenu">CASAS</a> - 
-			<a href="form.html" target="_self"class="lkMenu">HOTÉIS</a> -
-			<a href="form.html" target="_self"class="lkMenu">SALAS COMERCIAIS</a> -
+			<a href="casas.html" target="_self"class="lkMenu">CASAS</a> - 
+			<a href="hoteis.html" target="_self"class="lkMenu">HOTÉIS</a> -
+			<a href="salas.html" target="_self"class="lkMenu">SALAS COMERCIAIS</a> -
 			<a href="form.html" target="_self"class="lkMenu">FALE CONOSCO</a> 
 		</div>
 
 		
-		<div id="slide">
-			<div class="gallery autoplay items-3">
-
-            <div id="item-1" class="control-operator"></div>
-            <div id="item-2" class="control-operator"></div>
-            <div id="item-3" class="control-operator"></div>
-
-            <figure class="item">
-                <h1><img src="https://jjjjuniorrrr.github.io/img/1.png"></h1>
-            </figure>
-
-            <figure class="item">
-                    <h1><img src="https://jjjjuniorrrr.github.io/img/2.png"></h1>
-            </figure>
-
-            <figure class="item">
-                <h1><img src="https://jjjjuniorrrr.github.io/img/3.png"></h1>
-            </figure>
-
-            <div class="controls">
-                <a href="#item-1" class="control-button">.</a>
-                <a href="#item-2" class="control-button">.</a>
-                <a href="#item-3" class="control-button">.</a>
-            </div>
-
-        </div>
-
-		</div>
+	<div class="container">
+    <div class="photoWrapper">
+        <img class='photo'  src="https://jjjjuniorrrr.github.io/img/1.png" alt="" />
+    </div>
+    <div class="photoWrapper">
+        <img class='photo'  src="https://jjjjuniorrrr.github.io/img/2.png" alt="" />
+    </div>
+    <div class="photoWrapper">
+        <img class='photo'  src="https://jjjjuniorrrr.github.io/img/3.png" alt="" />
+    </div>
+    <div class="photoWrapper">
+        <img class='photo'  src="https://jjjjuniorrrr.github.io/img/4.png" alt="" />
+    </div>
+</div>
 	</body>
 
 
