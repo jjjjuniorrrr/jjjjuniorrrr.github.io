@@ -1,179 +1,189 @@
 <html>
-	<head>	
-		
+	<head> 
+	</head>
+		<title>RedeAV</title>
 
-		<style type="text/css">
+	<style>
+		/* For width smaller than 400px: */
+body {
+  background-image: url('https://jjjjuniorrrr.github.io/img/1jpg');
+	width: 100%;
+  height: 400px;
+  
+  background-size: 100% 100%;
+ 
+}
 
-			body{	background-image:url(https://jjjjuniorrrr.github.io/img/13.jpg);
-				background-repeat:repeat-x;
-				background-color:#ffffff;
-				
-			}
-
-			#logo{	position:absolute;
-				top:48px;
+/* For width 400px and larger: */
+@media only screen and (min-width: 400px) {
+  body {
+    background-image: url('https://jjjjuniorrrr.github.io/img/2.jpg');
+  }
+}
+		#logo{	position:relative;
+				top:0px;
 				left:0px;
 				width:150px;
 				height:150px;
-			
-			}
-			
-			#logo2{	position:absolute;
-				top:48px;
-				left:1094px;
-				width:150px;
-				height:150px;
+				
 			
 			}
 
-			#menu{	position:absolute;
-				top:112px;
-				left:181px;
-				width:1000px;
-				height:30px;
-				text-align:center;
-				line-height:30px;
-				word-spacing:3px;
-				color:#ffc90d;
-				font-family:arial;
-				font-size:15px;
-				
-				
-				
-				}
 
+		*{
+			margin:0;
+			padding:0;
+		}
+
+		.menu{
 			
-			.lkMenu{text-decoration:none;
-				color:#ffc90d;
-				font-weight:bold;
-				
-				
-				
-			}
-			.lkMenu:hover{color:#3f47cc;}
+			width: 100%;
+			height:50px;
+			background-color: #000;
+			fonte-family: "arial";
+			opacity: .5;		
+		}
+		.menu ul{
+			list-style: none;
+			position:relative;
+		}
+		.menu ul li{
+			width:150px;
+			float: left;
+		}
+		.menu a{
+			padding: 15px;
+			display:block;
+			text-decoration:none;
+			text-align:center;
+			background-color: #000;
+			color: #fff;
+		}
+		.menu ul ul{
+			position:absolute;
+			visibility:hidden;
+	
+		}
+		.menu ul li:hover ul{
+			visibility:visible;
+		}
+		.menu a:hover{
+			background-color: #f4f4f4;
+			color: #555;
+		}
+		.menu ul ul li{
+			float:none;
+			border-bottom: solid 1px #ccc;
+		}
+		.menu ul ul li a{
+			background-color: #000;
+		}
+		label[for="bt_menu"]{
+			padding:3px;
+			background-color:#000;
+			color: #fff;
+			font-family:"arial";
+			text-align:center;
+			font-size:30px;
+			cursor:pointer;
+			width: 50px;
+			height:50px;
+			margin-left: 153px;
+			opacity: .6;
+		}
+		
+		#bt_menu{
+			display:none;
 			
+		}
+		
+		label[for="bt_menu"]{
+			display: none;
+		}
+	@media(max-width:800px){
+			label[for="bt_menu"]{
+			display: block;
+			
+		}
 
-
-
-*{
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-h2 {
-  text-align: center;
-}
-a {color: #19838d;}
-
-.container {
-  margin: 50px auto;
-  padding-bottom: 28%;
-  width: 60%;
-  overflow: hidden;
-  border: 34px solid #fff;
-  position: relative;
-  display:block;
-  margin: 208px auto 40px;
-  box-shadow: 0 10px 10px #777;
-}
-body {
- 
-  margin: 0;
-  font-family: monospace;
-}
-.photoWrapper {
-  position: absolute;
-  animation: round 40s infinite;
-  opacity: 0;
-  top: 0;
-  left: 0;
-}
-.photo {
-  height:auto;
-  width:100%;
-}
-p.photoDescr {
-  background-color: #8e8e8e;
-  margin: 0;
-  padding: 5px;
-}
-
-@keyframes round {
-  25% {
-    opacity: 1;
-  }
-  40% {
-    opacity: 0;
-  }
-}
-.photoWrapper:nth-child(1) {
-  animation-delay: 0s;
-}
-
-.photoWrapper:nth-child(2) {
-  animation-delay: 10s;
-}
-
-.photoWrapper:nth-child(3) {
-  animation-delay: 20s;
-}
-
-.photoWrapper:nth-child(4) {
-  animation-delay: 30s;
-}
-@media (max-width: 728px) {
-  .container {
-    width: 90%;
-    padding-bottom: 50%;
-  }
-}
-
-
-
-
-
-
-
-		</style>
+		#bt_menu:checked ~ .menu{
+			margin-left: 0px;
+		}
+		
 
 		
+
+		.menu{
+			margin-top:5px;
+			margin-left: -100%;
+			transition: all .4s;
+		}
+
+			.menu ul li{
+				width:100%;
+				float:none;
+		}
+		.menu ul ul{
+			position:static;
+			overflow: hidden;
+			max-height:0;
+			transition: all .4s;	
+		}
 		
-	</head>
+		.menu ul li:hover ul{
+			height:auto;
+			max-height:200px;
+		}
+	}
+		
+		
+
+	</style>
+
+	<body><div id="logo"><img src="https://jjjjuniorrrr.github.io/img/logotrans.png"/></div>
+		
+	
+	<input type="checkbox" id="bt_menu">
+	<label for="bt_menu">&#9776;</label>
+	
+	
+	<nav class="menu">
+		
+		<ul>
+			<li><a href="#">Início</a></li>
+			<li><a href="#">Pousadas RedeAV</a>
+				<ul>	
+					<li><a href="#">Pousada Atlântico 1</a></li>
+					<li><a href="#">Pousada Atlântico 2</a></li>
+					<li><a href="#">Pousada Vila Marina</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Casas RedeAV</a>
+				<ul>	
+					<li><a href="#">Casa 1</a></li>
+					<li><a href="#">Casa 2</a></li>
+					<li><a href="#">Casa 3</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Salas Comerciais</a>
+				<ul>	
+					<li><a href="#">Salas Atlântico 1</a></li>
+					<li><a href="#">Sala Centrinho</a></li>
+				</ul>
+			</li>
+			
+			<li><a href="#">Aluguel Anual</a></li>
+			<li><a href="#">Casas</a></li>
+			<li><a href="#">Apartamentos</a></li>
+			<li><a href="#">Contato</a></li>
+		</ul>
+
+	
+</nav>
+
 	
 
 
-	<body>
-
-
-		<div id="logo"><img src="https://jjjjuniorrrr.github.io/img/logotrans.png"/></div>
-		<div id="logo2"><img src="https://jjjjuniorrrr.github.io/img/logotrans.png"/></div>
-		
-	<div id="menu">
-			<a href="sobre.html" target="_self"class="lkMenu">SOBRE A REDEAV</a> - 
-			<a href="pousadas.html" target="_self"class="lkMenu">POUSADAS</a> - 
-			<a href="casas.html" target="_self"class="lkMenu">CASAS</a> - 
-			<a href="hoteis.html" target="_self"class="lkMenu">HOTÉIS</a> -
-			<a href="salas.html" target="_self"class="lkMenu">SALAS COMERCIAIS</a> -
-			<a href="form.html" target="_self"class="lkMenu">FALE CONOSCO</a> 
-		</div>
-
-		
-	<div class="container">
-    <div class="photoWrapper">
-        <img class='photo'  src="https://jjjjuniorrrr.github.io/img/1.png" alt="" />
-    </div>
-    <div class="photoWrapper">
-        <img class='photo'  src="https://jjjjuniorrrr.github.io/img/2.png" alt="" />
-    </div>
-    <div class="photoWrapper">
-        <img class='photo'  src="https://jjjjuniorrrr.github.io/img/3.png" alt="" />
-    </div>
-    <div class="photoWrapper">
-        <img class='photo'  src="https://jjjjuniorrrr.github.io/img/4.png" alt="" />
-    </div>
-</div>
 	</body>
-
 
 </html>
