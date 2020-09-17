@@ -170,7 +170,7 @@ body {
 		
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<style>
 * {
   box-sizing: border-box;
 }
@@ -257,3 +257,4 @@ h3 a{
 }
 		
 
+</style>
