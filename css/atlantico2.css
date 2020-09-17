@@ -1,0 +1,260 @@
+
+body {
+	
+  width: 100%;
+  height: 400px;
+  background-image: url("img/background.jpg");
+  background-size: 100% 100%;
+
+ 
+ 	
+}
+
+@media only screen and (max-device-width: 800px) {
+  body {
+    background-image: url("img/1a.jpg");
+  }
+}
+		#logo{	position:relative;
+				top:0px;
+				left:0px;
+				width:150px;
+				height:150px;
+				
+			
+			}
+
+
+		*{
+			margin:0;
+			padding:0;
+		}
+
+		.menu{
+			
+			width: 100%;
+			height:50px;
+			background-color: #000;
+			font-family: "arial";
+			opacity: .9;
+			
+					
+		}
+		.menu ul{
+			list-style: none;
+			position:relative;
+		}
+		.menu ul li{
+			width:150px;
+			float: left;
+			
+		}
+		.menu a{ width: 100%;
+			padding: 15px;
+			display:block;
+			text-decoration:none;
+			text-align:center;
+			background-color: #000;
+			color: #fff;
+			font-size:16px;
+		}
+		.menu ul ul{
+			position:absolute;
+			visibility:hidden;
+	
+		}
+		.menu ul li:hover ul{
+			visibility:visible;
+		}
+		.menu a:hover{
+			background-color: #0a0a0a;
+			color: #ffc90d;
+		}
+		.menu ul ul li{
+			float:none;
+			border-bottom: solid 2px #ccc;
+		}
+		.menu ul ul li a{
+			background-color: #000;;
+		}
+		label[for="bt_menu"]{
+			padding:10px;
+			background-color:#000;
+			color: #fff;
+			font-family:"arial";
+			text-align:center;
+			font-size:50px;
+			cursor:pointer;
+			width: 70px;
+			height:70px;
+			margin-left: 5px;
+			
+			opacity: .9;
+			border-radius: 10px;
+		}
+		
+		#bt_menu{
+			display:none;
+			
+		}
+		
+		label[for="bt_menu"]{
+			display: none;
+		}
+	@media only screen and (max-device-width: 800px){
+			label[for="bt_menu"]{
+			display: block;
+			
+			
+		}
+
+		#bt_menu:checked ~ .menu{
+			margin-left: 0px;
+		}
+		
+
+		
+
+		.menu{
+			margin-top:5px;
+			margin-left: -100%;
+			transition: all .4s;
+			width: 50%;
+			font-size: 30px;
+			text-transform: uppercase;
+			font-family: "arial";
+			
+			
+			
+		}
+
+			.menu ul li{
+				width:100%;
+				float:none;
+				border-bottom: solid 7px #ccc;
+				
+		}
+		.menu ul ul{
+			position:static;
+			overflow: hidden;
+			max-height:0;
+			transition: all .4s;
+				
+			
+		}
+		
+		.menu ul li:hover ul{
+			height: auto;
+			max-height:200px;
+			
+		}
+
+		#logo{	width:400px;
+			height:400px;
+			
+  			
+		}
+		#logo img{
+			
+  		  width: 700px;
+		}
+		.menu a{
+			color: #fff;
+			font-size:30px
+			
+			
+		}
+		
+	}
+		
+		
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+ 
+ 
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+h3 {
+	text-align: center;
+	
+
+}
+
+h3 a{
+	text-decoration: none;
+	color: #FFBF00;
+	
+
+}
+
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 30px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  color: #fff;
+  background-color: #003366;
+  padding: 10px;
+  
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+	
+  }
+
+	
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+	
+  }
+	
+
+}
+</style>
+		
+
