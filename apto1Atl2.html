@@ -1,0 +1,150 @@
+<html>
+	<head> 
+		<title>RedeAV</title>
+		<link rel="stylesheet" type="text/css" href="css/apto1Atl2.css"
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+
+
+
+	
+
+	<body>
+
+	<div id="logo">
+		<img src="https://jjjjuniorrrr.github.io/img/logotrans.png"/>
+	</div>
+		
+	
+	 
+	<input type="checkbox" id="bt_menu">
+	<label for="bt_menu">&#9776;</label>
+	
+	
+		<nav class="menu">
+		
+		<ul>
+			<li><a href="index.html">Início</a></li>
+			<li><a href="#">Pousadas</a>
+				<ul>	
+					<li><a href="atlantico1.html">Atlântico 1</a></li>
+					<li><a href="atlantico2.html">Atlântico 2</a></li>
+					<li><a href="vilamarina.html">Vila Marina</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Casas </a>
+				<ul>	
+					<li><a href="casa1.html">Casa 1</a></li>
+					<li><a href="casa2.html">Casa 2</a></li>
+					<li><a href="casa3.html">Casa 3</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Salas</a>
+				<ul>	
+					<li><a href="salaatlantico.html">Salas Atlântico 1</a></li>
+					<li><a href="salacentrinho.html">Sala Centrinho</a></li>
+				</ul>
+			</li>
+			
+			<li><a href="anual.html">Aluguel Anual</a></li>
+			<li><a href="eventos.html">Eventos</a></li>
+			<li><a href="contato.html">Contato</a></li>
+			<li><a href="sobre.html">Sobre a REDEAV</a></li>
+		</ul>
+
+	
+		</nav>
+
+ <br/>  <br/>  <br/>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 7</div>
+  <img src="imgatlantico2/apto01/1.jpeg" style="width:100%">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 7</div>
+  <img src="imgatlantico2/apto01/2.jpeg" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 7</div>
+  <img src="imgatlantico2/apto01/3.jpeg" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 7</div>
+  <img src="imgatlantico2/apto01/4.jpeg" style="width:100%">
+  <div class="text">Caption Four</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">5 / 7</div>
+  <img src="imgatlantico2/apto01/5.jpg" style="width:100%">
+  <div class="text">Caption Five</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">6 / 7</div>
+  <img src="imgatlantico2/apto01/6.jpg" style="width:100%">
+  <div class="text">Caption Six</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">7 / 7</div>
+  <img src="imgatlantico2/apto01/7.jpg" style="width:100%">
+  <div class="text">Caption Seven</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span>
+   <span class="dot" onclick="currentSlide(4)"></span>
+ <span class="dot" onclick="currentSlide(5)"></span>
+ <span class="dot" onclick="currentSlide(6)"></span>
+ <span class="dot" onclick="currentSlide(7)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+
+</html>
