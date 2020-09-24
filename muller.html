@@ -35,10 +35,10 @@
                             <a class="nav-link" href="#blog">Localização</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#contact">Reservas</a>
+                            <a class="nav-link" href="formulario.html">Reservar</a>
                         </li>
                         <li class="nav-item book d-flex align-items-center">
-                            <a class="nav-link" href="#">Fale Conosco</a>
+                            <a class="nav-link" href="#contact">Fale Conosco</a>
                         </li>
                     </ul>
                 </div>
@@ -51,7 +51,7 @@
                 <div class="row">
                     <div class="col-lg-4 col-12 lobster-font-family d-flex align-items-center">
                         <h2>EM CONSTRUÇÃO</h2>
-                        <button><a href="#">Reservar</a></button>
+                        <button><a href="formulario.html">Reservar</a></button>
                     </div>
                 </div>
                 <div class="h-slider roboto-font-family welcome d-flex align-items-center justify-content-center">
@@ -146,11 +146,11 @@ principalmente brasileiros, argentinos e uruguaios, que lotam a praia na alta te
                 <div class="row">
                     <div class="col-6">
                         <div class="contact-form">
-                            <form>
-                                <input type="text" placeholder="Nome">
-                                <input type="email" placeholder="Email">
-                                <input type="text" placeholder="Telefone">
-                                <textarea placeholder="Mensagem"></textarea>
+                            <form action="https://formspree.io/xpzozraz" method="POST">
+                                <input type="text" name="name" placeholder="Nome">
+                                <input type="email" name="email"placeholder="Email">
+                                <input type="text" name="telefone" placeholder="Telefone">
+                                <input type="text" name="mensagem" placeholder="Mensagem">
                                 <input type="submit" value="Enviar">
                             </form>
                         </div>
