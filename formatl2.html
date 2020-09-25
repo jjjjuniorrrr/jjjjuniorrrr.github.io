@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Five Hotel</title>
+        <link rel="stylesheet" href="css/2bootstrap.min.css">
+        <link rel="stylesheet" href="css/2fontawesome.min.css">
+        <link rel="stylesheet" href="css/2style.css">
+        <link href="https://fonts.googleapis.com/css?family=Lobster|Lobster+Two|Noto+Serif" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    </head>
+    <body>
+        
+        <nav class="navbar navbar-expand-lg navbar-light bg-light text-capitalize main-font-family">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><img src="imgs/background.png" alt="#" /></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#show-menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="show-menu">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="atlantico1.html">Início <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#room">Acomodações</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link" href="#about">Serviços</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="#blog">Localização</a>
+                        </li>
+                      
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        
+
+        
+        <div class="contact  text-center">
+            <div class="container">
+                <h2 id="contact">FAÇA SUA RESERVA</h2>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="contact-form">
+                            <form action="https://formspree.io/xpzozraz" target="_blank" method="POST">
+        
+         			<label style= "display:none">POUSADA</label><br/>
+			<select style= "display:none" name="pousada">
+				
+				<option value="ATLANTICO 2">Atlântico2</option>
+				
+			</select><br/><br/>
+		
+            			<label>Check In</label>
+           			<input type="date"  name="CheckIn" required>
+          			<label>Check Out</label>
+           			<input type="date"  name="CheckOut" required>
+        			<labe>Adultos</label>
+				<input type="number" value="0" name="adultos" min="1" max="20" placeholder="Adultos">
+				<labe>Crianças</label>
+				<input type="number" value="0" name="crianças" min="0" max="20" placeholder="Crianças">
+				<input type="text" name="name" placeholder="Nome">
+                                <input type="email" name="email"placeholder="Email">
+                                <input type="text" name="telefone" placeholder="Telefone">
+                                <input type="text" name="mensagem" placeholder="Mensagem">
+        <button class="w3-button w3-dark-grey" type="submit"><i class="fa fa-search w3-margin-right"></i>Reservar</button>
+      </form>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <h2 class="text-right">
+Reserve suas férias para retiros relaxantes na REDE AV</h2>
+                        <img src="imgs/shape.png">
+                    </div>
+                </div>
+            </div>
+            <div></div>
+        </div>
+        
+        <footer class="noto-font-family">
+            <div class="overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <h3>Links Úteis</h3>
+                            <ul class="text-capitalize">
+                                <li><a href="index.html">Rede Av</a></li>
+                                <li><a href="atlantico1.html">Início</a></li>
+                                <li><a href="room.html">Acomodações</a></li>
+                                
+                            </ul>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <h3>Encontre-nos</h3>
+                            <p>Rua Onildo Lemos, 520 Praia do Santinho<br>
+                                Florianópolis, SC <br>
+                                (+55) 48 999536060<br>
+                                (+55) 48 991622332<br>
+ 				ambientedoviajante@gmail.com<br>
+                                www.redeav.com.br
+                            </p>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12 form">
+                            
+                            <ul>
+                                <li><a href="https://facebook.com/redeav"><i class="fab fa-facebook-f"></i></a></li>
+                                
+                                <li><a href="https://www.instagram.com/ambientedoviajante/"><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        <div class="copyright noto-font-family">
+            <p>© 2020 Todos os direitos reservados. Design by <a href="https://www.devfloripa.com.br">devFloripa</a></p>
+        </div>
+        
+        <script src="js/2jquery-3.3.1.min.js"></script>
+        <script src="js/2bootstrap.min.js"></script>
+        <script>
+            $(function () {
+                
+                'use strict';
+                
+                var winH = $(window).height();
+                
+                $('header').height(winH);
+                
+                $('.navbar ul.navbar-nav li a').on('click', function (e) {
+                    
+                    var getAttr = $(this).attr('href');
+                    
+                    e.preventDefault();
+                    $('html').animate({scrollTop: $(getAttr).offset().top}, 1000);
+                });
+            });
+        </script>
+    </body>
+</html>
