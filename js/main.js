@@ -133,15 +133,18 @@ center: true,
 
 // for filter
   // init Isotope
-  var $grid = $('.grid').isotope({
-    itemSelector: '.grid-item',
-    percentPosition: true,
-    masonry: {
-      // use outer width of grid-sizer for columnWidth
-      columnWidth: 1
-    }
-  });
-
+var $grid = $(".grid").isotope(); // declara a variável atribuída ao componente
+$(window).on("load", function(){
+   if(document.getElementById("menu") || document.getElementById("gallery")){
+         $grid.isotope({
+           itemSelector: ".all",
+           percentPosition: true,
+           masonry: {
+             columnWidth: ".all"
+           }
+         })
+   };
+});
   // filter items on button click
   $('.portfolio-menu').on('click', 'button', function () {
     var filterValue = $(this).attr('data-filter');
