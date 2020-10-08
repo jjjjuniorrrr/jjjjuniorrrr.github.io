@@ -133,17 +133,12 @@ center: true,
 
 // for filter
   // init Isotope
-var $grid = $(".grid").isotope(); // declara a variável atribuída ao componente
-$(window).on("load", function(){
-   if(document.getElementById("menu") || document.getElementById("gallery")){
-         $grid.isotope({
-           itemSelector: ".all",
-           percentPosition: true,
-           masonry: {
-             columnWidth: ".all"
-           }
-         })
-   };
+var $grid = $('.grid').isotope({
+  // options...
+});
+// layout Isotope after each image loads
+$grid.imagesLoaded().progress( function() {
+  $grid.isotope('layout');
 });
   // filter items on button click
   $('.portfolio-menu').on('click', 'button', function () {
